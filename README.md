@@ -1,2 +1,3 @@
-# Constrictive-Learning-notebooks
-init
+# Constrictive-Learning-notebook
+>>> enjoy ! 
+
