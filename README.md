@@ -123,7 +123,7 @@ Query image → ResNet18 encoder → 128-D embedding → KNN/FAISS search → To
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 - **PyTorch** & **PyTorch Lightning** — model + training loop
 - **Lightly** — SSL utilities (`LightlyDataset`, `NTXentLoss`, `SimCLRProjectionHead`)
