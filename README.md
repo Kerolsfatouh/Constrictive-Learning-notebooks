@@ -117,12 +117,13 @@ Query image → ResNet18 encoder → 128-D embedding → KNN/FAISS search → To
 ├── clothing-dataset-master/
 │   ├── images/                                               # Clothing images
 │   └── images.csv                                            # Image filenames + labels
+├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## Tech Stack
+## ⚙️ Tech Stack
 
 - **PyTorch** & **PyTorch Lightning** — model + training loop
 - **Lightly** — SSL utilities (`LightlyDataset`, `NTXentLoss`, `SimCLRProjectionHead`)
@@ -134,12 +135,12 @@ Query image → ResNet18 encoder → 128-D embedding → KNN/FAISS search → To
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Requirements
 
 ```bash
-pip install torch torchvision pytorch-lightning lightly scikit-learn pandas numpy matplotlib seaborn pillow
+pip install -r requirements.txt
 ```
 
 ### Dataset
@@ -170,7 +171,7 @@ The notebook walks through, in order:
 
 ---
 
-## 💡 Why Contrastive Learning?
+## Why Contrastive Learning?
 
 - **No manual labeling required** for the representation-learning stage
 - Learns **general-purpose, transferable visual features**
@@ -179,7 +180,7 @@ The notebook walks through, in order:
 
 ---
 
-## 📌 Notes
+##  Notes
 
 - The encoder is trained **from scratch** (no ImageNet pretraining) purely via contrastive self-supervision on the clothing dataset.
 - Embeddings are L2-normalized before similarity search, so cosine similarity ≡ Euclidean distance on the embedding sphere.
